@@ -6,8 +6,7 @@ return ข้อความต้อนรับในรูปแบบ string
 
 """
 def welcome_message(name, course):
-    # Your Problem 1 solution
-    pass
+    return f"Welcome{name} to {course} class! "
 
 """ เขียน function ชื่อ calculate_circle ที่มีคุณสมบัติดังนี้:
 
@@ -17,8 +16,10 @@ return dictionary ที่มี area และ circumference
 ปัดเศษทั้งสองค่าให้เหลือ 2 ตำแหน่งหลังจุดทศนิยม """
 
 def calculate_circle(radius):
-    # Your Problem 2 solution
-    pass
+    pr=3.14159
+    area=pr*radius*radius
+    circumference = 2 * pr * radius
+    return {"area":round(area,2),"circumference":round(circumference,2)}
 
 """ เขียน function ชื่อ create_user_profile ที่มีคุณสมบัติดังนี้:
 
@@ -29,9 +30,11 @@ return string ที่จัดรูปแบบข้อมูลผู้ใ
 """
 
 def create_user_profile(username, age=18, premium=False):
-    # Your Problem 3 solution
-    pass
-
+    if premium== True:
+        return f"{username} (age {age} ) is Premium User"
+    else:
+        return f"{username} (age {age} ) is Standard User"
+    
 """ เขียน function ชื่อ analyze_scores ที่มีคุณสมบัติดังนี้:
 
 รับ list ของคะแนน (ตัวเลข)
@@ -43,9 +46,26 @@ highest: คะแนนสูงสุด
 lowest: คะแนนต่ำสุด
 passed: จำนวนคะแนนที่ >= 70 """
 
-def analyze_scores(scores):
-    # Your Problem 4 solution
-    pass
+def analyze_scores(numbers):
+    total = sum(numbers)
+    count = len(numbers)
+    average = total / count
+    lowest = min(numbers)
+    hightest = max(numbers)
+
+    a=0
+    for number in number:
+        if number >=70:
+            a+=1;
+    
+    return {
+        'sum': total,
+        'count': count,
+        'average': round(average, 2),
+        'minimum': lowest,
+        'maximum': hightest,
+        "pessed":a
+    }
 
 """ เขียน function ชื่อ count_vowels_consonants ที่มีคุณสมบัติดังนี้:
 
@@ -55,8 +75,17 @@ return dictionary ที่มี vowels และ consonants counts
 ไม่สนใจตัวใหญ่ตัวเล็ก (case insensitive) """
 
 def count_vowels_consonants(text):
-    # Your Problem 5 solution
-    pass
+    text = text.lower()
+    text = text.replace(" ", "")
+
+    vowels = text.count('a') + text.count('e') + text.count('i')+ text.count('o')+ text.count('u')
+    check=text.len(text)
+    consonants=check-vowels
+
+    return {
+        "vowels": vowels,
+        "consonants": consonants
+    }
 
 # =============================================================================
 # TEST SECTION - DO NOT MODIFY
