@@ -13,10 +13,10 @@ class Rectangle :
         
     def GetArea(self):
         area=self.__leght * self.__width
-        return f" area = {area}"
+        return f"area = {area}"
     
     def getPerimeter(self):
-         print(f"perimeter={self.__leght + self.__width*2}")
+        print(f"perimeter={self.__leght + self.__width*2}")
 
     def isSquare(self):
         if self.__leght==self.__width:
