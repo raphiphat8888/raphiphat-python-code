@@ -4,7 +4,7 @@ student = {
     "major": "Computer Science",
     "gpa": 3.8,
     "courses": ["Python", "Java", "Calculus"]
-}
+}#dictionary
 
 # Accessing values by key
 print(f"Name: {student['name']}")           # Alice Smith
@@ -23,9 +23,9 @@ if 'gpa' in student:
     print(f"GPA: {student['gpa']}")
 
 # Get all keys, values, and items
-print(f"Keys: {list(student.keys())}")
-print(f"Values: {list(student.values())}")
-print(f"Items: {list(student.items())}")
+print(f"Keys: {list(student.keys())}")#เข้าถึงคีย์เวิร์ดหลัก
+print(f"Values: {list(student.values())}")#เข้าถึงข้อมูล
+print(f"Items: {list(student.items())}")#เข้าถึงทีละบรรทัด
 
 
 """ modify dictionary """

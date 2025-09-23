@@ -48,7 +48,7 @@ class Triangle(Shape):
     def perimeter(self):
         return self.side1 + self.side2 + self.side3
 
-# Polymorphism demonstration
+# Polymorphism demonstration คือไรอ่ะ
 def print_shape_info(shape):
     print(f"{shape.name}:")
     print(f"  Area: {shape.area():.2f}")

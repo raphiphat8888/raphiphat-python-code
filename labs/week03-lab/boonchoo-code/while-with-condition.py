@@ -25,7 +25,7 @@ while True:
         radius = float(input("Enter radius: "))
         if radius > 0:
             area = 3.14159 * radius * radius
-            print(f"Circle area: {area:.2f}")
+            print(f"Circle area: {area:.2f}ddd {radius}")
         else:
             print("Radius must be positive!")
             
