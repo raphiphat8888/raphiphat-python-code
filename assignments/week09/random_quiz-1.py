@@ -25,3 +25,32 @@ Example
     Congratulations! You won in 3 attempts!
 
 """
+import random
+#refactor != debug
+
+random_number = random.randint(1, 20)
+heart=6
+print(" === SIMPLE GUESSING GAME ===")
+print("Guess my number between 1 and 20!")
+print("You have 6 attempts")
+while True:
+    number=int(input("what is number do you think ?"))
+    if(number==random_number):
+        print("good gay bro")
+        break
+    elif (number>random_number):
+        heart=heart-1
+        print("your number is more")
+        print(f"You have {heart} attempts")
+    elif (number<random_number):
+        heart=heart-1
+        print("your number is less")
+        print(f"You have {heart} attempts")
+    if(heart==0):
+        print("you death")
+        break
+
+print("===number random===")
+print(random_number)
+    
+

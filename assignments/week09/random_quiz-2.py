@@ -58,8 +58,42 @@ def get_divisibility_hint(number):
 
 def get_range_hint(number, current_min=1, current_max=100):
     # Return narrowed range around the number
-    pass
+    step=10
+    lower=max(current_min,number-step)
+    upper=min(current_max,number+step)
+    return f"HINT : the number is between {lower} and {upper}"
 
 def get_thefirst_digit_hint(number):
     # Retun the first digit of the number
-    pass
+    first_digit=number//10
+    return f"HINT: the first digit is {first_digit}"
+
+random_number = random.randint(1, 100)
+print(" === SIMPLE GUESSING GAME ===")
+print("Guess my number between 1 and 100!")
+heart=0
+while True:
+    heart+=1
+    number=int(input("what is number do you think ?"))
+    if(number==random_number):
+        print("good gay bro")
+        break
+    elif (number>random_number):
+        print("your number is more")
+        print(f"{heart}time")
+    elif (number<random_number):
+        print("your number is less")
+        print(f"{heart}time")
+    if(heart==3):
+        print(get_parity_hint(random_number))
+    elif(heart==5):
+        print(get_divisibility_hint(random_number))
+    elif(heart==7):
+        print(get_range_hint(random_number))
+    elif(heart==10):
+        print(get_thefirst_digit_hint(random_number))
+        
+
+print("===number random===")
+print(random_number)
+    
